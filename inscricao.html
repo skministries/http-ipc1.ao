@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inscrição - IPC</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="custom.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Instituto Politécnico de Camacupa</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Página Inicial</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="cursos.html">Cursos</a></li>
+          <li><a href="prova-online.html">Prova Online</a></li>
+          <li><a href="matricula.html">Matrícula</a></li>
+          <li><a href="notas.html">Notas</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section id="inscricao">
+    <div class="container">
+      <h2>Inscrição</h2>
+      <p>Confirme seu curso escolhido e preencha seus dados para a inscrição.</p>
+      <form action="inscricao.php" method="POST" enctype="multipart/form-data">
+        <label for="curso">Curso Escolhido:</label>
+        <input type="text" id="curso" name="curso" readonly>
+        <label for="nome">Nome Completo:</label>
+        <input type="text" id="nome" name="nome" required>
+        <label for="nome_pai">Nome do Pai:</label>
+        <input type="text" id="nome_pai" name="nome_pai" required>
+        <label for="nome_mae">Nome da Mãe:</label>
+        <input type="text" id="nome_mae" name="nome_mae" required>
+        <label for="numero">Número de Identificação:</label>
+        <input type="text" id="numero" name="numero" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="foto">Fotografia (PDF):</label>
+        <input type="file" id="foto" name="foto" accept=".pdf" required>
+        <label for="certificado">Certificado (PDF):</label>
+        <input type="file" id="certificado" name="certificado" accept=".pdf" required>
+        <label for="bi">Bilhete de Identidade (PDF):</label>
+        <input type="file" id="bi" name="bi" accept=".pdf" required>
+        <button type="submit">Enviar Inscrição</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-column">
+        <h3>News</h3>
+        <p>Últimas notícias do Instituto Politécnico de Camacupa.</p>
+        <!-- Lista de últimas notícias -->
+      </div>
+      <div class="footer-column">
+        <h3>Políticas e Cookies</h3>
+        <p>Informações sobre nossas políticas e uso de cookies.</p>
+        <!-- Texto sobre políticas e cookies -->
+      </div>
+      <div class="footer-column">
+        <h3>Newsletter</h3>
+        <p>Assine nossa newsletter para receber atualizações.</p>
+        <!-- Formulário de inscrição na newsletter -->
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Função para pegar o parâmetro 'curso' da URL
+    function getCursoFromURL() {
+      const urlParams = new URLSearchParams(window.location.search);
+      return urlParams.get('curso');
+    }
+
+    // Preenche o campo de curso escolhido
+    document.addEventListener('DOMContentLoaded', function() {
+      const curso = getCursoFromURL();
+      if (curso) {
+        document.getElementById('curso').value = curso;
+      }
+    });
+  </script>
+</body>
+</html>
+

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instituto Politécnico de Camacupa</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    /* Estilos específicos para esta página */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      color: #333;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden; /* Esconde a barra de rolagem horizontal */
+    }
+    header {
+      background-color: #007bff; /* Azul do Bootstrap */
+      color: #fff;
+      padding: 10px 0;
+      text-align: center;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+    }
+    .btn-primary {
+      background-color: #28a745; /* Verde do Bootstrap */
+      border-color: #28a745; /* Verde do Bootstrap */
+      font-size: 1.1rem;
+    }
+    .btn-primary:hover {
+      background-color: #218838; /* Verde escuro do Bootstrap */
+      border-color: #1e7e34; /* Verde escuro do Bootstrap */
+    }
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+    }
+    /* Estilos para animações de fundo */
+    .background-animation {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      pointer-events: none;
+      overflow: hidden;
+    }
+    .particle-container {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+    .particle {
+      position: absolute;
+      background-color: rgba(255, 255, 255, 0.8);
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      pointer-events: none;
+      animation: moveParticles linear infinite;
+      animation-duration: 10s;
+    }
+    @keyframes moveParticles {
+      0% {
+        transform: translateY(0) translateX(0) scale(1);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-100vh) translateX(100vw) scale(0.3);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="background-animation">
+    <div class="particle-container">
+      <!-- Aqui serão inseridas as partículas animadas -->
+      <!-- Utilizando JavaScript para adicionar partículas dinamicamente -->
+    </div>
+  </div>
+
+  <header>
+    <div class="container">
+      <h1>Instituto Politécnico de Camacupa</h1>
+      <p class="lead">Transformando o conhecimento em oportunidades.</p>
+      <a href="cursos.html" class="btn btn-primary">Conheça nossos cursos</a>
+    </div>
+  </header>
+
+  <section id="sobre">
+    <div class="container">
+      <h2>Sobre nós</h2>
+      <p>O Instituto Politécnico de Camacupa é uma instituição de ensino superior comprometida com a excelência acadêmica e o desenvolvimento pessoal de seus estudantes. Oferecemos cursos nas áreas de informática, construção civil, máquinas e motores, energias renováveis e instalações elétricas.</p>
+      <p>Este texto é para demonstrar a rolagem da página. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et justo tincidunt, gravida sapien sed, sagittis odio. Etiam euismod ullamcorper odio, sit amet cursus quam suscipit ut.</p>
+      <p>Phasellus bibendum sapien vel turpis posuere, non malesuada lorem gravida. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+    </div>
+  </section>
+
+  <section id="noticias">
+    <div class="container">
+      <h2>Últimas Notícias</h2>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card">
+            <img src="noticia1.jpg" class="card-img-top" alt="Notícia 1">
+            <div class="card-body">
+              <h5 class="card-title">Novo curso de Tecnologia de Energias Renováveis</h5>
+              <p class="card-text">Estamos lançando o novo curso de Tecnologia de Energias Renováveis para o próximo semestre. Inscreva-se já!</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card">
+            <img src="noticia2.jpg" class="card-img-top" alt="Notícia 2">
+            <div class="card-body">
+              <h5 class="card-title">Inauguração do Laboratório de Informática Avançada</h5>
+              <p class="card-text">Estamos inaugurando o novo Laboratório de Informática Avançada, equipado com tecnologia de ponta.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="cursos">
+    <div class="container">
+      <h2>Nossos Cursos</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Programação Web</h5>
+              <p class="card-text">Descrição do curso de Programação Web...</p>
+              <a href="#" class="btn btn-primary">Saiba mais</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Design Gráfico</h5>
+              <p class="card-text">Descrição do curso de Design Gráfico...</p>
+              <a href="#" class="btn btn-primary">Saiba mais</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Engenharia Civil</h5>
+              <p class="card-text">Descrição do curso de Engenharia Civil...</p>
+              <a href="#" class="btn btn-primary">Saiba mais</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 Instituto Politécnico de Camacupa. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- Script para adicionar partículas dinamicamente -->
+  <script>
+    function createParticles() {
+      const particleContainer = document.querySelector('.particle-container');
+      const numParticles = 50;
+
+      for (let i = 0; i < numParticles; i++) {
+        const particle = document.createElement('div');
+        particle.classList.add('particle');
+        particle.style.left = `${Math.random() * 100}%`;
+        particle.style.animationDelay = `${Math.random() * 5}s`; // Adiciona um atraso aleatório para criar uma sensação de movimento variável
+        particleContainer.appendChild(particle);
+      }
+    }
+
+    window.addEventListener('DOMContentLoaded', (event) => {
+      createParticles();
+    });
+  </script>
+</body>
+</html>
+
+
